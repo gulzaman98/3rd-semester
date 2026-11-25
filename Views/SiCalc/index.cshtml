@@ -1,0 +1,39 @@
+﻿@model class_work.Models.Si
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+<h4>SI</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index" method="post">
+            
+
+            <div class="form-group mb-3">
+                <label asp-for="_p" class="control-label"></label>
+                <input asp-for="_p" class="form-control" />
+                
+            </div>
+            
+            <div class="form-group mb-3">
+                <label asp-for="_r" class="control-label"></label>
+                <input asp-for="_r" class="form-control" />
+                
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="_t" class="control-label"></label>
+                <input asp-for="_t" class="form-control" />
+                
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+        <p>@ViewBag.Result</p>
+        
+    </div>
+</div>
